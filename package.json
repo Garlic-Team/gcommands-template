@@ -1,0 +1,24 @@
+{
+  "name": "gcommands-template-js",
+  "version": "1.0.0",
+  "description": "GCommands bot template in JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Garlic-Team/gcommands-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Garlic-Team/gcommands-template/issues"
+  },
+  "homepage": "https://github.com/Garlic-Team/gcommands-template#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "gcommands": "^0.1.0-nextdev.1641238536"
+  }
+}
