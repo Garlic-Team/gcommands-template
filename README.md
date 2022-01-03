@@ -2,8 +2,6 @@
     <h1>GCommands Template</h1>
 </div>
 
----
-
 This repo is used for the base GCommands templates.
 
 Currently branchs:
