@@ -1,0 +1,29 @@
+{
+  "name": "gcommands-template-ts",
+  "version": "1.0.0",
+  "description": "GCommands bot template in TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx ts-node src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Garlic-Team/gcommands-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Garlic-Team/gcommands-template/issues"
+  },
+  "homepage": "https://github.com/Garlic-Team/gcommands-template#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.7",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "gcommands": "^0.1.0-nextdev.1641238536"
+  }
+}
