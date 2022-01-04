@@ -1,3 +1,5 @@
+// https://garlic-team.js.org/guide/getting-started/first-command.html
+
 const { Command, CommandType } = require('gcommands');
 
 new Command({
