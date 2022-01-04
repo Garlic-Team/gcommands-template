@@ -1,0 +1,10 @@
+const { Command, CommandType } = require('gcommands');
+
+new Command({
+    name: '{name}',
+    description: '{description}',
+    type: {type},
+    run: (ctx) => {
+        return ctx.reply(`Hello ${ctx.user.username}`);
+    }
+})

@@ -1,0 +1,10 @@
+import { Command, CommandType } from 'gcommands';
+
+new Command({
+    name: '{name}',
+    description: '{description}',
+    type: {type},
+    run: (ctx) => {
+        return ctx.reply(`Hello ${ctx.user.username}`);
+    }
+})
