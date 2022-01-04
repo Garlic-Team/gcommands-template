@@ -8,7 +8,7 @@ const client = new GClient({
     devGuildId: process.env.devGuildId,
     dirs: [
         join(__dirname, 'commands'),
-        join(__dirname, 'events')
+        join(__dirname, 'listeners')
     ]
 })
 
