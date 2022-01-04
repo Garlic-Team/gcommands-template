@@ -1,0 +1,9 @@
+import { Listener } from 'gcommands';
+
+new Listener({
+    name: '{name}',
+    event: '{event}',
+    run: ({parameters}) => {
+        // Your code
+    }
+})
