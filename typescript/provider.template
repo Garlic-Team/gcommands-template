@@ -1,0 +1,57 @@
+import Logger from 'js-logger';
+import { Collection } from 'discord.js';
+import { Provider, ProviderTypes } from 'gcommands';
+
+declare module 'gcommands' {
+    type ProviderTypes = 'template';
+}
+
+export class TemplateProvider extends Provider {
+	uri: string;
+	client: Collection;
+	type: ProviderTypes;
+
+	constructor(uri?: string) {
+		super();
+
+		this.uri = uri;
+		this.type = 'collection';
+
+		this.client = new Collection();
+	}
+
+	async init(): Promise<void> {
+		Logger.debug('Template initializated!');
+		this.emit('connected', this.client);
+
+		return;
+	}
+
+	async insert(key: string, value: any) {
+		const data = await this.update(key, value, ttl);
+
+		return data;
+	}
+
+	async get(key: string) {
+		const data = await this.client.get(key);
+
+		return data;
+	}
+
+	async update(key: string, value: any) {
+		const data = await this.client.set(key, value);
+
+		return data;
+	}
+
+	async delete(key: string) {
+		const data = await this.client.delete(key);
+
+		return data;
+	}
+
+	clear() {
+		return this.client.clear();
+	}
+}
