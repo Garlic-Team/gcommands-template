@@ -3,7 +3,7 @@ import { Collection } from 'discord.js';
 import { Provider, ProviderTypes } from 'gcommands';
 
 declare module 'gcommands' {
-    type ProviderTypes = 'template';
+    type ProviderTypes = 'collection';
 }
 
 export class TemplateProvider extends Provider {
@@ -28,7 +28,7 @@ export class TemplateProvider extends Provider {
 	}
 
 	async insert(key: string, value: any) {
-		const data = await this.update(key, value, ttl);
+		const data = await this.update(key, value);
 
 		return data;
 	}
