@@ -1,0 +1,33 @@
+const {Inhibitor} = require('gcommands');
+const {CommandContext} = require('gcommands');
+const {ComponentContext} = require('gcommands');
+const {Snowflake} = require('discord.js');
+
+/**
+ * @param {Array<Snowflake} ids
+ * @typedef {(object)} CustomInhbitorOptions
+ */
+
+module.exports = class CustomInhbitor extends Inhibitor.Inhibitor {
+	/**
+	 * @param {CustomInhbitorOptions} options 
+	 */
+	constructor(options) {
+		super(options);
+
+		this.ids = options.ids;
+	}
+
+	/**
+	 * @param {CommandContext | ComponentContext} ctx 
+	 * @returns {boolean | any}
+	 */
+	run(ctx) {
+		if (!this.ids.some(id => ctx.user.id === id)) return ctx.reply({ 
+			content: this.resolveMessage(ctx) || 'You cannot use this command.',
+			ephemeral: this.ephemeral,
+		});
+
+		else return true;
+	}
+}

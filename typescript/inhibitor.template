@@ -1,0 +1,27 @@
+import {Inhibitor} from 'gcommands';
+import {CommandContext} from 'gcommands';
+import {ComponentContext} from 'gcommands';
+import {Snowflake} from 'discord.js';
+
+export interface CustomInhbitorOptions extends Inhibitor.InhibitorOptions {
+	ids: Array<Snowflake>;
+}
+
+export class CustomInhbitor extends Inhibitor.Inhibitor {
+	public readonly ids: Array<Snowflake>;
+
+	constructor(options: CustomInhbitorOptions) {
+		super(options);
+
+		this.ids = options.ids;
+	}
+
+	run(ctx: CommandContext | ComponentContext): boolean | any {
+		if (!this.ids.some(id => ctx.user.id === id)) return ctx.reply({ 
+			content: this.resolveMessage(ctx) || 'You cannot use this command.',
+			ephemeral: this.ephemeral,
+		});
+
+		else return true;
+	}
+}
