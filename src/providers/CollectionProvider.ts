@@ -2,10 +2,6 @@ import Logger from 'js-logger';
 import { Collection } from 'discord.js';
 import { Provider, ProviderTypes } from 'gcommands';
 
-declare module 'gcommands' {
-    type ProviderTypes = 'collection';
-}
-
 export class CollectionProvider extends Provider {
 	uri: string;
 	client: Collection<unknown, unknown>;

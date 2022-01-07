@@ -24,6 +24,6 @@
   },
   "dependencies": {
     "dotenv": "^10.0.0",
-    "gcommands": "^9.0.0-next.1641485796"
+    "gcommands": "^9.0.0-next.1641552050"
   }
 }
