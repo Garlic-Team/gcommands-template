@@ -1,5 +1,5 @@
 <div align="center">
-    <h1>GCommands Template</h1>
+    <h1>GCommands Templates</h1>
 </div>
 
 This repo is used for the base GCommands templates.
