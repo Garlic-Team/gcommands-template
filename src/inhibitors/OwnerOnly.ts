@@ -1,4 +1,4 @@
-import { Snowflake } from 'discord.js';
+import type { Snowflake } from 'discord.js';
 import { CommandContext, ComponentContext, Inhibitor } from 'gcommands';
 
 export interface OwnerOnlyOptions extends Inhibitor.InhibitorOptions {
