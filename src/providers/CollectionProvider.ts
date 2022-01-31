@@ -3,14 +3,12 @@ import { Collection } from 'discord.js';
 import { Provider, ProviderTypes } from 'gcommands';
 
 export class CollectionProvider extends Provider {
-	uri: string;
 	client: Collection<unknown, unknown>;
 	type: ProviderTypes;
 
-	constructor(uri?: string) {
+	constructor() {
 		super();
 
-		this.uri = uri;
 		this.type = 'collection';
 
 		this.client = new Collection();
