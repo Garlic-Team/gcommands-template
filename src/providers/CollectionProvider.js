@@ -3,17 +3,8 @@ const { Collection } = require('discord.js');
 const { Provider, ProviderTypes } = require('gcommands');
 
 class TemplateProvider extends Provider {
-	/**
-	 * @param {string} uri 
-	 */
-	constructor(uri) {
+	constructor() {
 		super();
-
-		/**
-		 * uri
-		 * @type {string}
-		 */
-		this.uri = uri;
 
 		/**
 		 * type
