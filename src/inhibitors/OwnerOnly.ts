@@ -6,7 +6,7 @@ export interface OwnerOnlyOptions extends Inhibitor.InhibitorOptions {
 }
 
 export class OwnerOnlyInhbitor extends Inhibitor.Inhibitor {
-    public readonly ids: Array<Snowflake>;
+	public readonly ids: Array<Snowflake>;
 
 	constructor(options?: OwnerOnlyOptions) {
 		super(options);
@@ -15,7 +15,10 @@ export class OwnerOnlyInhbitor extends Inhibitor.Inhibitor {
 	}
 
 	run(ctx: CommandContext | ComponentContext): boolean | any {
-		if (!this.ids.includes(ctx.userId)) return ctx.reply(this.resolveMessage(ctx) || 'You can not use this command');
+		if (!this.ids.includes(ctx.userId))
+			return ctx.reply(
+				this.resolveMessage(ctx) || 'You can not use this command',
+			);
 		else return true;
 	}
 }
