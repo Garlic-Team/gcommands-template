@@ -13,7 +13,7 @@ export class CollectionProvider extends Provider {
 		this.client = new Collection();
 	}
 
-	async init(): Promise<void> {
+	init(): void {
 		Logger.debug('Template initializated!');
 		this.emit('connected', this.client);
 
