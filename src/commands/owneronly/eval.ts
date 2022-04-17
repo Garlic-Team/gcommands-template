@@ -1,5 +1,5 @@
 import { ArgumentType, Command, CommandType } from 'gcommands';
-import { inspect } from 'util';
+import { inspect } from 'node:util';
 import { OwnerOnlyInhbitor } from '../../inhibitors/OwnerOnly';
 
 new Command({
