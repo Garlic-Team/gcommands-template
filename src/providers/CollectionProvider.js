@@ -1,30 +1,32 @@
-const Logger = require('js-logger');
+'use strict';
+
 const { Collection } = require('discord.js');
-const { Provider, ProviderTypes } = require('gcommands');
+const { Provider, Logger } = require('gcommands');
 
 class TemplateProvider extends Provider {
 	constructor() {
 		super();
 
 		/**
-		 * type
-		 * @type {ProviderTypes}
+		 * Type
+		 * @type {import('gcommands').ProviderTypes}
 		 */
 		this.type = 'collection';
 
 		this.client = new Collection();
 	}
 
-	async init() {
+	/**
+	 * @returns {void}
+	 */
+	init() {
 		Logger.debug('Template initializated!');
 		this.emit('connected', this.client);
-
-		return;
 	}
 
 	/**
-	 * @param {string} key 
-	 * @param {string} value 
+	 * @param {string} key
+	 * @param {string} value
 	 * @returns {Promise<any>}
 	 */
 	async insert(key, value) {
@@ -34,7 +36,7 @@ class TemplateProvider extends Provider {
 	}
 
 	/**
-	 * @param {string} key 
+	 * @param {string} key
 	 * @returns {Promise<any>}
 	 */
 	async get(key) {
@@ -44,8 +46,8 @@ class TemplateProvider extends Provider {
 	}
 
 	/**
-	 * @param {string} key 
-	 * @param {string} value 
+	 * @param {string} key
+	 * @param {string} value
 	 * @returns {Promise<any>}
 	 */
 	async update(key, value) {
@@ -55,7 +57,7 @@ class TemplateProvider extends Provider {
 	}
 
 	/**
-	 * @param {string} key 
+	 * @param {string} key
 	 * @returns {Promise<any>}
 	 */
 	async delete(key) {
@@ -64,6 +66,9 @@ class TemplateProvider extends Provider {
 		return data;
 	}
 
+	/**
+	 * @returns {any}
+	 */
 	clear() {
 		return this.client.clear();
 	}
