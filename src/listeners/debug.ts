@@ -1,4 +1,4 @@
-import { Listener } from "gcommands";
+import { Listener } from 'gcommands';
 
 new Listener({
     event: 'debug',
@@ -6,4 +6,4 @@ new Listener({
     run: (string) => {
         console.log(string);
     }
-})
+});

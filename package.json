@@ -4,7 +4,10 @@
   "description": "GCommands bot template in TypeScript",
   "main": "index.js",
   "scripts": {
-    "start": "npx ts-node src/index.ts"
+    "start": "npx ts-node src/index.ts",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write src/**/*.ts"
   },
   "repository": {
     "type": "git",
@@ -19,11 +22,18 @@
   "homepage": "https://github.com/Garlic-Team/gcommands-template#readme",
   "devDependencies": {
     "@types/node": "^17.0.7",
+    "@typescript-eslint/eslint-plugin": "^5.19.0",
+    "eslint": "^8.13.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.4"
   },
   "dependencies": {
+    "discord.js": "^13.6.0",
     "dotenv": "^10.0.0",
-    "gcommands": "^9.0.1-next"
+    "gcommands": "^9.1.0"
   }
 }

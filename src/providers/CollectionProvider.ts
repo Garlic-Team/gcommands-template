@@ -1,6 +1,5 @@
-import Logger from 'js-logger';
 import { Collection } from 'discord.js';
-import { Provider, ProviderTypes } from 'gcommands';
+import { Provider, ProviderTypes, Logger } from 'gcommands';
 
 export class CollectionProvider extends Provider {
 	client: Collection<unknown, unknown>;
